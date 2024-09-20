@@ -18,7 +18,7 @@ const Navbar = () => {
                 </svg>
             </div>
             <div className="">
-                <nav className="container mx-auto px-4 py-4 md:flex justify-between items-center">
+                <nav className="container mx-auto px-8 py-4 md:flex justify-between items-center">
                     <div className="flex space-x-6">
                         {navItems.map((item, index) => (
                             <div key={index} className="relative group">
@@ -38,7 +38,7 @@ const Navbar = () => {
                             placeholder="Search"
                             className="bg-white rounded-full py-2 px-4 pr-10"
                         />
-                        <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+                        <Search className="absolute md:right-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
                     </div>
                 </nav>
                 
@@ -48,7 +48,7 @@ const Navbar = () => {
                         {cardColors.map((color, index) => (
                             <div
                                 key={index}
-                                className={`md:w-64 w-72 h-64 ${color} rounded-lg transition-all duration-300 ease-in-out cursor-pointer ${hoveredCard === index ? 'scale-125 z-10' : 'scale-100'
+                                className={`md:w-64 w-72 md:hover:w-80 md:hover:h-80 h-64 ${color} rounded-md transition-all duration-300 ease-in-out cursor-pointer ${hoveredCard === index ? 'scale-125 z-10' : 'scale-100'
                                     }`}
                                 style={{
                                     transform: `translateX(${hoveredCard !== null && hoveredCard !== index ? (hoveredCard < index ? '20px' : '-20px') : '0px'})`,

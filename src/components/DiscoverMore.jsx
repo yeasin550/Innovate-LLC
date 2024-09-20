@@ -1,4 +1,6 @@
-import React from 'react';
+"use client"
+
+import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
 const categories = ['All Categories', 'Art', 'Celebrities', 'Gaming', 'Sport', 'Music'];
@@ -15,6 +17,11 @@ const cards = [
 ];
 
 const DiscoverMore = () => {
+        const [showFilters, setShowFilters] = useState(false);
+
+    const handleButtonClick = () => {
+        setShowFilters((prevState) => !prevState); // Toggle filter visibility
+    };
     return (
         <div className="p-4 mb-12 md:mt-32 mt-[650px] sm:p-6 bg-white w-full sm:w-11/12 mx-auto">
             <h1 className="text-2xl sm:text-2xl font-bold mb-4 text-center sm:text-left">DISCOVER MORE</h1>
@@ -32,10 +39,37 @@ const DiscoverMore = () => {
                     ))}
                 </div>
 
-                <button className="flex items-center space-x-1 bg-gray-100 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm">
-                    <span>All Filters</span>
-                    <ChevronDown size={16} />
-                </button>
+                 <div className="relative">
+            {/* Filter Button */}
+            <button
+                className="flex items-center space-x-1 bg-gray-100 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm"
+                onClick={handleButtonClick}
+            >
+                <span>All Filters</span>
+                <ChevronDown size={16} />
+            </button>
+
+            {/* Filter Options */}
+            {showFilters && (
+                <div className="absolute w-32 top-7 right-10 bg-white border border-red-500 rounded-lg shadow-lg p-4 mt-2">
+                    <p className="text-sm font-medium">Filter Options:</p>
+                    <div className="mt-2 space-y-2">
+                        <label className="block">
+                            <input type="checkbox" className="mr-2" />
+                            Option 1
+                        </label>
+                        <label className="block">
+                            <input type="checkbox" className="mr-2" />
+                            Option 2
+                        </label>
+                        <label className="block">
+                            <input type="checkbox" className="mr-2" />
+                            Option 3
+                        </label>
+                    </div>
+                </div>
+            )}
+        </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

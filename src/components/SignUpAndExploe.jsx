@@ -46,7 +46,7 @@ const SignUpAndExploe = () => {
                             quality={100}
                         />
                     </div>
-                    <div className="absolute md:ml-80 md:-mt-24 bg-purple-500 border-black rounded-xl w-56 h-56">
+                    <div className="absolute md:ml-80 md:-mt-24 bg-purple-500 border-black rounded-xl w-64 md:w-56 h-56">
                         <Image
                             src=" https://img.freepik.com/free-vector/abstract-splatter-squares-background_23-2147489790.jpg?t=st=1726756150~exp=1726759750~hmac=4dd120d4a3e60de78bf944943784c1e24dc669e007021a783ebd9173a93205a1&w=740"
                             alt="Picture of the author"
@@ -65,7 +65,7 @@ const SignUpAndExploe = () => {
                             quality={100}
                         />
                     </div>
-                    <div className="absolute md:ml-20 md:mt-24 bg-purple-400 border-black rounded-xl  w-48 h-48">
+                    <div className="absolute md:ml-20 md:mt-24 mt-56 bg-purple-400 border-black rounded-xl  w-64 md:w-48 h-48">
                         <Image
                             src="https://img.freepik.com/free-vector/abstract-background-with-blank-photo-frame-montage-design_1048-12888.jpg?t=st=1726756960~exp=1726760560~hmac=57f82667d51f91fd934d5c2dbe806a2a7972c147786e33447bf70b239ae529df&w=740"
                             alt="Picture of the author"
@@ -86,7 +86,7 @@ const SignUpAndExploe = () => {
                         />
                     </div>
                 </div>
-                <div className="md:w-1/2 md:pl-16 md:mt-64">
+                <div className="md:w-1/2 md:pl-16 md:mt-64 mt-[500px]">
                     <p className="text-xl text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in  qui officia deserunt mollit anim id est laborum..</p>
                     <button className="py-2 px-4 duration-1000 rounded-md border-2 border-purple-700 hover:bg-purple-600 hover:text-white mt-4">Explore Now</button>
                 </div>

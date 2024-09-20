@@ -28,7 +28,7 @@ const Overview = () => {
         <div>
             <div className="bg-gradient-to-b from-orange-100 to-[#6BE6A8] mt-32">
                 <div className="px-20">
-                    <div className="relative w-full h-[500px] ">
+                    <div className="relative h-[500px] ">
                         <div className="absolute inset-0 md:flex items-center justify-center gap-10">
 
                             <div className="md:w-1/2">
